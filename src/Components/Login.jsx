@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Form, Alert } from "react-bootstrap";
 import { useUserAuth } from "../contexts/UserAuthContext";
 import styled from "styled-components";
@@ -24,7 +24,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { logIn} = useUserAuth();
+  const { logIn } = useUserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -37,8 +37,6 @@ const Login = () => {
       setError(err.message);
     }
   };
-
- 
 
   return (
     <>
@@ -66,6 +64,7 @@ const Login = () => {
             <Button variant="primary" type="Submit">
               Log In
             </Button>
+            <Button variant="secondary">register In</Button>
           </div>
         </Form>
         <hr />
